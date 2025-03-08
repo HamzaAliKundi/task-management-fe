@@ -1,11 +1,19 @@
-# Welcome to the web poratl!
+# Task Management Syaytem
 
-## To install dependencies
+## 🚀 Getting Started  
 
-`npm i`
+Follow the steps below to set up and run this project on your local machine.  
 
-## To run the project locally
+### 📥 Clone the Repository  
+```sh
+git clone <repository-url>
+cd <project-folder>
 
-`npm run start:docker` for running through docker
-or
-`npm run dev` for normal running
+# 📦 Install Dependencies
+npm install
+
+# 🏃 Start the Development Server
+npm run dev
+```
+
+Your server will now be running, and you can access the project in your browser.
