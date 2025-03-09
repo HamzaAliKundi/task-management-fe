@@ -2,14 +2,12 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { LogOut, User, Settings } from "lucide-react";
 import Button from "../common/button";
-import { useCurrentUserQuery } from "../apis/tasks";
 import logo from "/logo.svg";
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
-  const { data: currentUser } = useCurrentUserQuery();
 
   const handleLogout = () => {
     setIsLoading(true);
@@ -37,7 +35,7 @@ const Navbar = () => {
         <div className="flex items-center mr-4 relative group">
           <User className="h-5 w-5 text-gray-700 mr-2" />
           <span className="text-gray-700 font-semibold cursor-pointer">
-            {currentUser?.name || 'User'}
+            User
           </span>
           
         </div>

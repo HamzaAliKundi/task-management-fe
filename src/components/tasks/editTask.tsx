@@ -37,7 +37,33 @@ const EditTask = () => {
   };
 
   if (isLoading)
-    return <LoadingTableSkeleton rowCount={1} columnCount={5} />;
+    return (
+      <div className="animate-pulse">
+        <div className="h-8 w-48 bg-gray-200 rounded mb-6"></div>
+        
+        <div className="space-y-6">
+          <div>
+            <div className="h-5 w-20 bg-gray-200 rounded mb-2"></div>
+            <div className="h-10 bg-gray-200 rounded"></div>
+          </div>
+
+          <div>
+            <div className="h-5 w-24 bg-gray-200 rounded mb-2"></div>
+            <div className="h-32 bg-gray-200 rounded"></div>
+          </div>
+
+          <div>
+            <div className="h-5 w-16 bg-gray-200 rounded mb-2"></div>
+            <div className="h-10 bg-gray-200 rounded"></div>
+          </div>
+
+          <div className="flex justify-end gap-3">
+            <div className="h-10 w-20 bg-gray-200 rounded"></div>
+            <div className="h-10 w-28 bg-gray-200 rounded"></div>
+          </div>
+        </div>
+      </div>
+    );
 
   return (
     <div className="sm:p-0 md:p-6 lg:p-6">

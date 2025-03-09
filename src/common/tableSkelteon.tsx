@@ -35,8 +35,8 @@ const LoadingTableSkeleton: React.FC<SkeletonTableProps> = ({
 
   return (
     <div
-      className="flex justify-center items-center shadow-md"
-      style={{ height: "560px" }}
+      className="flex justify-center items-center shadow-md px-5"
+      style={{ height: "400px" }}
     >
       <div className="w-full max-w-7xl space-y-4">{renderSkeletonRows()}</div>
     </div>

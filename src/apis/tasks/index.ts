@@ -100,14 +100,3 @@ export function useEditTaskMutation() {
     },
   });
 }
-
-const fetchCurrentUser = async () => {
-  const response = await axiosInstance.get('/user/current-user/info');
-  return response.data;
-};
-export function useCurrentUserQuery() {
-  return useQuery({
-    queryKey: [CURRENT_USER_QUERY_KEY],
-    queryFn: fetchCurrentUser
-  });
-}

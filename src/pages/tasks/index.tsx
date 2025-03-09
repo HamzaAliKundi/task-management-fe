@@ -18,13 +18,13 @@ const Tasks = () => {
   const [search, setSearch] = useState<string>("");
   const [showModal, setShowModal] = useState<boolean>(false);
   const [totalDocs, setTotalDocs] = useState<number>(0);
-  const [debouncedSearchValue] = useDebounce(search, 300);
+  const [searchParam] = useDebounce(search, 300);
   const [itemIdToDelete, setItemIdToDelete] = useState<string | null>(null);
 
   const { data: tasks, isLoading } = useTasksQuery(
     page,
     limit,
-    search
+    searchParam
   );
   const { mutate: deleteUser, isPending: isLoadingDeletingUser } =
     useDeleteTaskMutation();
@@ -88,7 +88,7 @@ const Tasks = () => {
         </Button>
       </div>
       {isLoading ? (
-        <LoadingTableSkeleton rowCount={7} columnCount={6} />
+        <LoadingTableSkeleton rowCount={5} columnCount={6} />
       ) : (
         <>
           <div className="bg-white shadow-md py-5">
